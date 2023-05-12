@@ -4,14 +4,14 @@ pipeline {
     stage("build") {
       steps {
         sh """
-          docker build -t HelloWorld .
+          docker build -t hello_world .
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm HelloWorld
+          docker run --rm hello_world
         """
       }
     }
